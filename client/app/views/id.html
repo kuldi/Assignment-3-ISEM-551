@@ -1,0 +1,19 @@
+<a class="btn btn-success" href="/#/create/id"><span class="glyphicon glyphicon-plus""></span> Add Person</a>
+<table class="table table-striped">
+  <thead>
+  <th>Name</th>
+  <th>Contact</th>
+  </thead>
+  <tbody>
+  <tr ng-repeat="id in Id">
+    <td><a ng-href="/#/id/{{ id._id }}">{{ id.Name }}</a></td>
+    <td>{{ id.Contact }}</td>
+    <td>
+      <div class="button-group">
+        <a ng-href="/#/id/{{ id._id }}/edit" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span>Edit</a>
+        <a ng-href="/#/id/{{ id._id }}/delete" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span> Delete</a>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>
